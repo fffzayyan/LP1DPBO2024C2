@@ -7,22 +7,55 @@ using namespace std;
 
 int main()
 {
-    Dpr fulan;
+    string id;
+    string nama;
+    string bidang;
+    string partai;
 
-    fulan.set_id("01");
-    fulan.set_nama("Fulan");
-    fulan.set_bidang("Pertahanan");
-    fulan.set_partai("Partai 1");
+    int pilihan;
 
-    Dpr fulanah("02", "Fulanah", "Komunikasi", "Partai 2");
+    do
+    {
+        cout << "Pilihan menu" << endl;
+        cout << "1. Tambah data" << endl;
+        cout << "2. Ubah data" << endl;
+        cout << "3. Hapus data" << endl;
+        cout << "4. Tampil data" << endl;
+        cout << "5. Keluar" << endl;
+        cout << "Masukkan pilihan: " << endl;
+        cin >> pilihan;
 
-    cout << '\n' << "Data anggota DPR: " << '\n';
-    cout << fulan.get_id() << '\n';
-    cout << "Nama: " << fulan.get_nama() << '\n';
-    cout << "Bidang: " << fulan.get_bidang() << '\n';
-    cout << "Asal Partai: " << fulan.get_partai() << "\n\n";
-    cout << fulanah.get_id() << '\n';
-    cout << "Nama: " << fulanah.get_nama() << '\n';
-    cout << "Bidang: " << fulanah.get_bidang() << '\n';
-    cout << "Asal Partai: " << fulanah.get_partai() << "\n\n";
+        switch(pilihan)
+        {
+            case 1:
+                cout << "Masukkan data anggota DPR: " << endl;
+                cout << "Masukkan id: ";
+                cin >> id;
+                cout << "Masukkan nama: ";
+                cin >> nama;
+                cout << "Masukkan bidang: ";
+                cin >> bidang;
+                cout << "Masukkan asal partai: ";
+                cin >> partai;
+                break;
+            case 2:
+                cout << "Ubah data anggota DPR: " << endl;
+                break;
+            case 3:
+                cout << "Hapus data anggota DPR: " << endl;
+                break;
+            case 4:
+                cout << "Tampilkan data anggota DPR: " << endl;
+                break;
+            case 5:
+                cout << "Program selesai dijalankan" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak tersedia" << endl;
+                break;
+        }
+    }
+    while(pilihan != 5);
+
+    return 0;
 }

@@ -85,13 +85,6 @@ class Dpr
             this->partai = partai;
         }
 
-        // Public Method
-        // DPR melakukan rapat
-        void rapat()
-        {
-            cout << this->nama << " sedang melakukan rapat." << '\n';
-        }
-
         // Destructor
         ~Dpr()
         {
